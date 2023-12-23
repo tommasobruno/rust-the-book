@@ -2,12 +2,19 @@ use std::{cmp::Ordering, io};
 
 use rand::Rng;
 
+fn test_slice(test: &str) -> &str {
+    return &test[..2];
+}
+
 fn main() {
     println!("Guess a number");
 
     let random = rand::thread_rng().gen_range(1..100);
 
     let mut input = String::new();
+
+    let res = test_slice("Test slice");
+    println!("Result is {res}");
 
     loop {
         println!("Input your number");
